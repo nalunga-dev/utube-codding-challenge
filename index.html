@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>U-TUBE</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20version%3D%221.1%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%220%200%2024%2024%22%20enable-background%3D%22new%200%200%2024%2024%22%20xml%3Aspace%3D%22preserve%22%20focusable%3D%22false%22%20aria-hidden%3D%22true%22%20style%3D%22pointer-events%3A%20none%3B%20display%3A%20inherit%3B%20width%3A%20100%25%3B%20height%3A%20100%25%3B%22%3E%0A%20%20%3Cg%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23FF0033%22%20d%3D%22M21.58%2C7.19c-0.23-0.86-0.91-1.54-1.77-1.77C18.25%2C5%2C12%2C5%2C12%2C5S5.75%2C5%2C4.19%2C5.42%20%20%20C3.33%2C5.65%2C2.65%2C6.33%2C2.42%2C7.19C2%2C8.75%2C2%2C12%2C2%2C12s0%2C3.25%2C0.42%2C4.81c0.23%2C0.86%2C0.91%2C1.54%2C1.77%2C1.77C5.75%2C19%2C12%2C19%2C12%2C19%20%20%20s6.25%2C0%2C7.81-0.42c0.86-0.23%2C1.54-0.91%2C1.77-1.77C22%2C15.25%2C22%2C12%2C22%2C12S22%2C8.75%2C21.58%2C7.19z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23FFFFFF%22%20points%3D%2210%2C15%2015%2C12%2010%2C9%20%20%22%3E%3C%2Fpolygon%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E" type="image/x-icon">
+  <body>
+    <nav>
+      <div class="youtube">
+        <i class='bx bx-menu'></i>
+        <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20id%3D%22yt-ringo2-svg_yt8%22%20width%3D%2293%22%20height%3D%2220%22%20viewBox%3D%220%200%2093%2020%22%20focusable%3D%22false%22%20aria-hidden%3D%22true%22%20style%3D%22pointer-events%3A%20none%3B%20display%3A%20inherit%3B%20width%3A%20100%25%3B%20height%3A%20100%25%3B%22%3E%0A%20%20%3Cg%3E%0A%20%20%20%20%3Cpath%20d%3D%22M14.4848%2020C14.4848%2020%2023.5695%2020%2025.8229%2019.4C27.0917%2019.06%2028.0459%2018.08%2028.3808%2016.87C29%2014.65%2029%209.98%2029%209.98C29%209.98%2029%205.34%2028.3808%203.14C28.0459%201.9%2027.0917%200.94%2025.8229%200.61C23.5695%200%2014.4848%200%2014.4848%200C14.4848%200%205.42037%200%203.17711%200.61C1.9286%200.94%200.954148%201.9%200.59888%203.14C0%205.34%200%209.98%200%209.98C0%209.98%200%2014.65%200.59888%2016.87C0.954148%2018.08%201.9286%2019.06%203.17711%2019.4C5.42037%2020%2014.4848%2020%2014.4848%2020Z%22%20fill%3D%22%23FF0033%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3Cpath%20d%3D%22M19%2010L11.5%205.75V14.25L19%2010Z%22%20fill%3D%22white%22%3E%3C%2Fpath%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20id%3D%22youtube-paths_yt8%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M37.1384%2018.8999V13.4399L40.6084%202.09994H38.0184L36.6984%207.24994C36.3984%208.42994%2036.1284%209.65994%2035.9284%2010.7999H35.7684C35.6584%209.79994%2035.3384%208.48994%2035.0184%207.22994L33.7384%202.09994H31.1484L34.5684%2013.4399V18.8999H37.1384Z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3Cpath%20d%3D%22M44.1003%206.29994C41.0703%206.29994%2040.0303%208.04994%2040.0303%2011.8199V13.6099C40.0303%2016.9899%2040.6803%2019.1099%2044.0403%2019.1099C47.3503%2019.1099%2048.0603%2017.0899%2048.0603%2013.6099V11.8199C48.0603%208.44994%2047.3803%206.29994%2044.1003%206.29994ZM45.3903%2014.7199C45.3903%2016.3599%2045.1003%2017.3899%2044.0503%2017.3899C43.0203%2017.3899%2042.7303%2016.3499%2042.7303%2014.7199V10.6799C42.7303%209.27994%2042.9303%208.02994%2044.0503%208.02994C45.2303%208.02994%2045.3903%209.34994%2045.3903%2010.6799V14.7199Z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3Cpath%20d%3D%22M52.2713%2019.0899C53.7313%2019.0899%2054.6413%2018.4799%2055.3913%2017.3799H55.5013L55.6113%2018.8999H57.6012V6.53994H54.9613V16.4699C54.6812%2016.9599%2054.0312%2017.3199%2053.4212%2017.3199C52.6512%2017.3199%2052.4113%2016.7099%2052.4113%2015.6899V6.53994H49.7812V15.8099C49.7812%2017.8199%2050.3613%2019.0899%2052.2713%2019.0899Z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3Cpath%20d%3D%22M62.8261%2018.8999V4.14994H65.8661V2.09994H57.1761V4.14994H60.2161V18.8999H62.8261Z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3Cpath%20d%3D%22M67.8728%2019.0899C69.3328%2019.0899%2070.2428%2018.4799%2070.9928%2017.3799H71.1028L71.2128%2018.8999H73.2028V6.53994H70.5628V16.4699C70.2828%2016.9599%2069.6328%2017.3199%2069.0228%2017.3199C68.2528%2017.3199%2068.0128%2016.7099%2068.0128%2015.6899V6.53994H65.3828V15.8099C65.3828%2017.8199%2065.9628%2019.0899%2067.8728%2019.0899Z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3Cpath%20d%3D%22M80.6744%206.26994C79.3944%206.26994%2078.4744%206.82994%2077.8644%207.73994H77.7344C77.8144%206.53994%2077.8744%205.51994%2077.8744%204.70994V1.43994H75.3244L75.3144%2012.1799L75.3244%2018.8999H77.5444L77.7344%2017.6999H77.8044C78.3944%2018.5099%2079.3044%2019.0199%2080.5144%2019.0199C82.5244%2019.0199%2083.3844%2017.2899%2083.3844%2013.6099V11.6999C83.3844%208.25994%2082.9944%206.26994%2080.6744%206.26994ZM80.7644%2013.6099C80.7644%2015.9099%2080.4244%2017.2799%2079.3544%2017.2799C78.8544%2017.2799%2078.1644%2017.0399%2077.8544%2016.5899V9.23994C78.1244%208.53994%2078.7244%208.02994%2079.3944%208.02994C80.4744%208.02994%2080.7644%209.33994%2080.7644%2011.7299V13.6099Z%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3Cpath%20d%3D%22M92.6517%2011.4999C92.6517%208.51994%2092.3517%206.30994%2088.9217%206.30994C85.6917%206.30994%2084.9717%208.45994%2084.9717%2011.6199V13.7899C84.9717%2016.8699%2085.6317%2019.1099%2088.8417%2019.1099C91.3817%2019.1099%2092.6917%2017.8399%2092.5417%2015.3799L90.2917%2015.2599C90.2617%2016.7799%2089.9117%2017.3999%2088.9017%2017.3999C87.6317%2017.3999%2087.5717%2016.1899%2087.5717%2014.3899V13.5499H92.6517V11.4999ZM88.8617%207.96994C90.0817%207.96994%2090.1717%209.11994%2090.1717%2011.0699V12.0799H87.5717V11.0699C87.5717%209.13994%2087.6517%207.96994%2088.8617%207.96994Z%22%3E%3C%2Fpath%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E" alt="">
+      </div>
+      <div class="micro-phone">
+        <form> <i class='bx bx-search'></i> <input type="text" placeholder="search" > <i class='bx bx-search'></i> </form>
+        <i class='bx bxs-microphone'></i>
+      </div>
+    <div class="create">
+      <button class="buttoncreate" ><span><i class='bx bx-plus'></i></span> create </button>
+      <i class='bx bx-cast'></i>
+      <i class='bx bx-bell'></i>
+      <img src="https://yt3.ggpht.com/61WVZDrYj--pkLSh65sBcj4fii0ukTto8KLTZoFG3nqG4dgejk1wMGMO1QqjDhLRis-S4stU7Q=s88-c-k-c0x00ffffff-no-rj" class="profile"
+       alt="profile">
+       <div class="bar">
+        <i class='bx bx-search'></i>
+       </div>
+     
+    </div>
+    </nav>
+   <section>
+    <div class="section-content">
+      <div class="home">
+        <div class="home1">
+          <i class='bx bx-home-alt'></i>
+          <p>home</p>
+        </div>
+        <div class="home1">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22currentColor%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20focusable%3D%22false%22%20aria-hidden%3D%22true%22%20style%3D%22pointer-events%3A%20none%3B%20display%3A%20inherit%3B%20width%3A%20100%25%3B%20height%3A%20100%25%3B%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22m7.61%2015.719.392-.22v-2.24l-.534-.228-.942-.404c-.869-.372-1.4-1.15-1.446-1.974-.047-.823.39-1.642%201.203-2.097h.001L15.13%203.59c1.231-.689%202.785-.27%203.466.833.652%201.058.313%202.452-.879%203.118l-1.327.743-.388.217v2.243l.53.227.942.404c.869.372%201.4%201.15%201.446%201.974.047.823-.39%201.642-1.203%202.097l-.002.001-8.845%204.964-.001.001c-1.231.688-2.784.269-3.465-.834-.652-1.058-.313-2.451.879-3.118l1.327-.742Zm1.993%206.002c-1.905%201.066-4.356.46-5.475-1.355-1.057-1.713-.548-3.89%201.117-5.025a4.14%204.14%200%2001.305-.189l1.327-.742-.942-.404a4.055%204.055%200%2001-.709-.391c-.963-.666-1.578-1.718-1.644-2.877-.08-1.422.679-2.77%201.968-3.49l8.847-4.966c1.905-1.066%204.356-.46%205.475%201.355%201.057%201.713.548%203.89-1.117%205.025a4.074%204.074%200%2001-.305.19l-1.327.742.942.403c.253.109.49.24.709.392.963.666%201.578%201.717%201.644%202.876.08%201.423-.679%202.77-1.968%203.491l-8.847%204.965ZM10%2014.567a.25.25%200%2000.374.217l4.45-2.567a.25.25%200%20000-.433l-4.45-2.567a.25.25%200%2000-.374.216v5.134Z%22%20fill-rule%3D%22evenodd%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="">
+          <p>shorts</p>
+        </div>
+        <div class="home1">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22currentColor%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20focusable%3D%22false%22%20aria-hidden%3D%22true%22%20style%3D%22pointer-events%3A%20none%3B%20display%3A%20inherit%3B%20width%3A%20100%25%3B%20height%3A%20100%25%3B%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22M4%204.5A1.5%201.5%200%20015.5%203h13A1.5%201.5%200%200120%204.5H4Zm16.5%203h-17v11h17v-11ZM3.5%206A1.5%201.5%200%20002%207.5v11A1.5%201.5%200%20003.5%2020h17a1.5%201.5%200%20001.5-1.5v-11A1.5%201.5%200%200020.5%206h-17Zm7.257%204.454a.5.5%200%2000-.757.43v4.233a.5.5%200%2000.757.429L15%2013l-4.243-2.546Z%22%20fill-rule%3D%22evenodd%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="">
+          <p>Subscriptions</p>
+        </div>
+      </div>
+      <div class="home">
+        <div class="home1">
+          <p>you</p>
+          <i class='bx bx-chevron-right'></i>
+        </div>
+        <div class="home1">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22currentColor%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20focusable%3D%22false%22%20aria-hidden%3D%22true%22%20style%3D%22pointer-events%3A%20none%3B%20display%3A%20inherit%3B%20width%3A%20100%25%3B%20height%3A%20100%25%3B%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22M14.203%204.83c-1.74-.534-3.614-.418-5.274.327-1.354.608-2.49%201.6-3.273%202.843H8.25c.414%200%20.75.336.75.75s-.336.75-.75.75H3V4.25c0-.414.336-.75.75-.75s.75.336.75.75v2.775c.935-1.41%202.254-2.536%203.815-3.236%201.992-.894%204.241-1.033%206.328-.392%202.088.641%203.87%202.02%205.017%203.878%201.146%201.858%201.578%204.07%201.215%206.223-.364%202.153-1.498%204.1-3.19%205.48-1.693%201.379-3.83%202.095-6.012%202.016-2.182-.08-4.26-.949-5.849-2.447-1.588-1.499-2.578-3.523-2.784-5.697-.039-.412.264-.778.676-.817.412-.04.778.263.818.675.171%201.812.996%203.499%202.32%204.748%201.323%201.248%203.055%201.973%204.874%202.04%201.818.065%203.598-.532%205.01-1.681%201.41-1.15%202.355-2.773%202.657-4.567.303-1.794-.056-3.637-1.012-5.186-.955-1.548-2.44-2.697-4.18-3.231ZM12.75%207.5c0-.414-.336-.75-.75-.75s-.75.336-.75.75v4.886l.314.224%203.5%202.5c.337.241.806.163%201.046-.174.241-.337.163-.806-.174-1.046l-3.186-2.276V7.5Z%22%20fill-rule%3D%22evenodd%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="">
+          <p>History</p>
+        </div>
+        <div class="home1">
+          <i class='bx bxs-playlist'></i>
+          <p>Subscriptions</p>
+        </div>
+        <div class="home1">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22currentColor%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20focusable%3D%22false%22%20aria-hidden%3D%22true%22%20style%3D%22pointer-events%3A%20none%3B%20display%3A%20inherit%3B%20width%3A%20100%25%3B%20height%3A%20100%25%3B%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22M4%204.5A1.5%201.5%200%20015.5%203h13A1.5%201.5%200%200120%204.5H4Zm16.5%203h-17v11h17v-11ZM3.5%206A1.5%201.5%200%20002%207.5v11A1.5%201.5%200%20003.5%2020h17a1.5%201.5%200%20001.5-1.5v-11A1.5%201.5%200%200020.5%206h-17Zm7.257%204.454a.5.5%200%2000-.757.43v4.233a.5.5%200%2000.757.429L15%2013l-4.243-2.546Z%22%20fill-rule%3D%22evenodd%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="">
+          <p>YourVideos</p>
+      
+        </div>
+        <div class="home1">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22currentColor%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20focusable%3D%22false%22%20aria-hidden%3D%22true%22%20style%3D%22pointer-events%3A%20none%3B%20display%3A%20inherit%3B%20width%3A%20100%25%3B%20height%3A%20100%25%3B%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22m7.61%2015.719.392-.22v-2.24l-.534-.228-.942-.404c-.869-.372-1.4-1.15-1.446-1.974-.047-.823.39-1.642%201.203-2.097h.001L15.13%203.59c1.231-.689%202.785-.27%203.466.833.652%201.058.313%202.452-.879%203.118l-1.327.743-.388.217v2.243l.53.227.942.404c.869.372%201.4%201.15%201.446%201.974.047.823-.39%201.642-1.203%202.097l-.002.001-8.845%204.964-.001.001c-1.231.688-2.784.269-3.465-.834-.652-1.058-.313-2.451.879-3.118l1.327-.742Zm1.993%206.002c-1.905%201.066-4.356.46-5.475-1.355-1.057-1.713-.548-3.89%201.117-5.025a4.14%204.14%200%2001.305-.189l1.327-.742-.942-.404a4.055%204.055%200%2001-.709-.391c-.963-.666-1.578-1.718-1.644-2.877-.08-1.422.679-2.77%201.968-3.49l8.847-4.966c1.905-1.066%204.356-.46%205.475%201.355%201.057%201.713.548%203.89-1.117%205.025a4.074%204.074%200%2001-.305.19l-1.327.742.942.403c.253.109.49.24.709.392.963.666%201.578%201.717%201.644%202.876.08%201.423-.679%202.77-1.968%203.491l-8.847%204.965ZM10%2014.567a.25.25%200%2000.374.217l4.45-2.567a.25.25%200%20000-.433l-4.45-2.567a.25.25%200%2000-.374.216v5.134Z%22%20fill-rule%3D%22evenodd%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="">
+          <p>shorts</p>
+        </div>
+        <div class="home1">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22currentColor%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20focusable%3D%22false%22%20aria-hidden%3D%22true%22%20style%3D%22pointer-events%3A%20none%3B%20display%3A%20inherit%3B%20width%3A%20100%25%3B%20height%3A%20100%25%3B%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22M4%204.5A1.5%201.5%200%20015.5%203h13A1.5%201.5%200%200120%204.5H4Zm16.5%203h-17v11h17v-11ZM3.5%206A1.5%201.5%200%20002%207.5v11A1.5%201.5%200%20003.5%2020h17a1.5%201.5%200%20001.5-1.5v-11A1.5%201.5%200%200020.5%206h-17Zm7.257%204.454a.5.5%200%2000-.757.43v4.233a.5.5%200%2000.757.429L15%2013l-4.243-2.546Z%22%20fill-rule%3D%22evenodd%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="">
+          <p>LikedVideos</p>
+        </div>
+        <div class="home1">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22currentColor%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20focusable%3D%22false%22%20aria-hidden%3D%22true%22%20style%3D%22pointer-events%3A%20none%3B%20display%3A%20inherit%3B%20width%3A%20100%25%3B%20height%3A%20100%25%3B%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22M4%204.5A1.5%201.5%200%20015.5%203h13A1.5%201.5%200%200120%204.5H4Zm16.5%203h-17v11h17v-11ZM3.5%206A1.5%201.5%200%20002%207.5v11A1.5%201.5%200%20003.5%2020h17a1.5%201.5%200%20001.5-1.5v-11A1.5%201.5%200%200020.5%206h-17Zm7.257%204.454a.5.5%200%2000-.757.43v4.233a.5.5%200%2000.757.429L15%2013l-4.243-2.546Z%22%20fill-rule%3D%22evenodd%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="">
+          <p>Liked videos</p>
+        </div>
+      </div>
+      <div class="home">
+        <h3>Subscriptions</h3>
+        <div class="home1">
+          <i class='bx bx-home-alt'></i>
+          <p>TheatreFocus....</p>
+        </div>
+        <div class="home1">
+          <i class='bx bx-home-alt'></i>
+          <p>TheatreFocus....</p>
+        </div>
+        <div class="home1">
+          <i class='bx bx-home-alt'></i>
+          <p>TheatreFocus....</p>
+        </div>
+        <div class="home1">
+          <i class='bx bx-home-alt'></i>
+          <p>TheatreFocus....</p>
+        </div>
+        <div class="home1">
+          <i class='bx bx-home-alt'></i>
+          <p>TheatreFocus....</p>
+        </div>
+        <div class="home1">
+          <p>Show more</p>
+          <i class='bx bx-chevron-right'></i>
+        </div>
+      </div>
+      <div class="home">
+        <h3>More from YouTube</h3>
+        <div class="home1">
+          <i class='bx bx-home-alt'></i>
+          <p>home</p>
+        </div>
+        <div class="home1">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22currentColor%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20focusable%3D%22false%22%20aria-hidden%3D%22true%22%20style%3D%22pointer-events%3A%20none%3B%20display%3A%20inherit%3B%20width%3A%20100%25%3B%20height%3A%20100%25%3B%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22m7.61%2015.719.392-.22v-2.24l-.534-.228-.942-.404c-.869-.372-1.4-1.15-1.446-1.974-.047-.823.39-1.642%201.203-2.097h.001L15.13%203.59c1.231-.689%202.785-.27%203.466.833.652%201.058.313%202.452-.879%203.118l-1.327.743-.388.217v2.243l.53.227.942.404c.869.372%201.4%201.15%201.446%201.974.047.823-.39%201.642-1.203%202.097l-.002.001-8.845%204.964-.001.001c-1.231.688-2.784.269-3.465-.834-.652-1.058-.313-2.451.879-3.118l1.327-.742Zm1.993%206.002c-1.905%201.066-4.356.46-5.475-1.355-1.057-1.713-.548-3.89%201.117-5.025a4.14%204.14%200%2001.305-.189l1.327-.742-.942-.404a4.055%204.055%200%2001-.709-.391c-.963-.666-1.578-1.718-1.644-2.877-.08-1.422.679-2.77%201.968-3.49l8.847-4.966c1.905-1.066%204.356-.46%205.475%201.355%201.057%201.713.548%203.89-1.117%205.025a4.074%204.074%200%2001-.305.19l-1.327.742.942.403c.253.109.49.24.709.392.963.666%201.578%201.717%201.644%202.876.08%201.423-.679%202.77-1.968%203.491l-8.847%204.965ZM10%2014.567a.25.25%200%2000.374.217l4.45-2.567a.25.25%200%20000-.433l-4.45-2.567a.25.25%200%2000-.374.216v5.134Z%22%20fill-rule%3D%22evenodd%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="">
+          <p>shorts</p>
+        </div>
+        <div class="home1">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22currentColor%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20focusable%3D%22false%22%20aria-hidden%3D%22true%22%20style%3D%22pointer-events%3A%20none%3B%20display%3A%20inherit%3B%20width%3A%20100%25%3B%20height%3A%20100%25%3B%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22M4%204.5A1.5%201.5%200%20015.5%203h13A1.5%201.5%200%200120%204.5H4Zm16.5%203h-17v11h17v-11ZM3.5%206A1.5%201.5%200%20002%207.5v11A1.5%201.5%200%20003.5%2020h17a1.5%201.5%200%20001.5-1.5v-11A1.5%201.5%200%200020.5%206h-17Zm7.257%204.454a.5.5%200%2000-.757.43v4.233a.5.5%200%2000.757.429L15%2013l-4.243-2.546Z%22%20fill-rule%3D%22evenodd%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="">
+          <p>Subscriptions</p>
+        </div>
+        <div class="home1">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22currentColor%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20focusable%3D%22false%22%20aria-hidden%3D%22true%22%20style%3D%22pointer-events%3A%20none%3B%20display%3A%20inherit%3B%20width%3A%20100%25%3B%20height%3A%20100%25%3B%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22M4%204.5A1.5%201.5%200%20015.5%203h13A1.5%201.5%200%200120%204.5H4Zm16.5%203h-17v11h17v-11ZM3.5%206A1.5%201.5%200%20002%207.5v11A1.5%201.5%200%20003.5%2020h17a1.5%201.5%200%20001.5-1.5v-11A1.5%201.5%200%200020.5%206h-17Zm7.257%204.454a.5.5%200%2000-.757.43v4.233a.5.5%200%2000.757.429L15%2013l-4.243-2.546Z%22%20fill-rule%3D%22evenodd%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="">
+          <p>Subscriptions</p>
+        </div>
+      </div>
+      <div class="home">
+        <div class="home1">
+          <i class='bx bx-home-alt'></i>
+          <p>home</p>
+        </div>
+        <div class="home1">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22currentColor%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20focusable%3D%22false%22%20aria-hidden%3D%22true%22%20style%3D%22pointer-events%3A%20none%3B%20display%3A%20inherit%3B%20width%3A%20100%25%3B%20height%3A%20100%25%3B%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22m7.61%2015.719.392-.22v-2.24l-.534-.228-.942-.404c-.869-.372-1.4-1.15-1.446-1.974-.047-.823.39-1.642%201.203-2.097h.001L15.13%203.59c1.231-.689%202.785-.27%203.466.833.652%201.058.313%202.452-.879%203.118l-1.327.743-.388.217v2.243l.53.227.942.404c.869.372%201.4%201.15%201.446%201.974.047.823-.39%201.642-1.203%202.097l-.002.001-8.845%204.964-.001.001c-1.231.688-2.784.269-3.465-.834-.652-1.058-.313-2.451.879-3.118l1.327-.742Zm1.993%206.002c-1.905%201.066-4.356.46-5.475-1.355-1.057-1.713-.548-3.89%201.117-5.025a4.14%204.14%200%2001.305-.189l1.327-.742-.942-.404a4.055%204.055%200%2001-.709-.391c-.963-.666-1.578-1.718-1.644-2.877-.08-1.422.679-2.77%201.968-3.49l8.847-4.966c1.905-1.066%204.356-.46%205.475%201.355%201.057%201.713.548%203.89-1.117%205.025a4.074%204.074%200%2001-.305.19l-1.327.742.942.403c.253.109.49.24.709.392.963.666%201.578%201.717%201.644%202.876.08%201.423-.679%202.77-1.968%203.491l-8.847%204.965ZM10%2014.567a.25.25%200%2000.374.217l4.45-2.567a.25.25%200%20000-.433l-4.45-2.567a.25.25%200%2000-.374.216v5.134Z%22%20fill-rule%3D%22evenodd%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="">
+          <p>shorts</p>
+        </div>
+        <div class="home1">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22currentColor%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20focusable%3D%22false%22%20aria-hidden%3D%22true%22%20style%3D%22pointer-events%3A%20none%3B%20display%3A%20inherit%3B%20width%3A%20100%25%3B%20height%3A%20100%25%3B%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22M4%204.5A1.5%201.5%200%20015.5%203h13A1.5%201.5%200%200120%204.5H4Zm16.5%203h-17v11h17v-11ZM3.5%206A1.5%201.5%200%20002%207.5v11A1.5%201.5%200%20003.5%2020h17a1.5%201.5%200%20001.5-1.5v-11A1.5%201.5%200%200020.5%206h-17Zm7.257%204.454a.5.5%200%2000-.757.43v4.233a.5.5%200%2000.757.429L15%2013l-4.243-2.546Z%22%20fill-rule%3D%22evenodd%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="">
+          <p>Subscriptions</p>
+        </div>
+        <div class="home1">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22currentColor%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20focusable%3D%22false%22%20aria-hidden%3D%22true%22%20style%3D%22pointer-events%3A%20none%3B%20display%3A%20inherit%3B%20width%3A%20100%25%3B%20height%3A%20100%25%3B%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22M4%204.5A1.5%201.5%200%20015.5%203h13A1.5%201.5%200%200120%204.5H4Zm16.5%203h-17v11h17v-11ZM3.5%206A1.5%201.5%200%20002%207.5v11A1.5%201.5%200%20003.5%2020h17a1.5%201.5%200%20001.5-1.5v-11A1.5%201.5%200%200020.5%206h-17Zm7.257%204.454a.5.5%200%2000-.757.43v4.233a.5.5%200%2000.757.429L15%2013l-4.243-2.546Z%22%20fill-rule%3D%22evenodd%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="">
+          <p>Subscriptions</p>
+        </div>
+      </div>
+      <div class="home">
+        <p>AboutPressCopyrightContact usCreatorsAdvertiseDevelopers</p>
+        <p>
+          TermsPrivacyPolicy & SafetyHow YouTube worksTest new features</p>
+          <p>© 2025 Google LLC</p>
+      </div>
+    </div>
+    <div class="section-Videos">
+      <div class="heading" >
+        <button class="All"> All</button>
+        <button class="All">Live </button>
+        <button class="All"> Music </button>
+        <button class="All">Podcasts </button>
+        <button class="All">Mixes</button>
+        <button class="All">NollyWood </button>
+        <button class="All">Playlists </button>
+        <button class="All">Live </button>
+        <button class="All"> Music </button>
+        <button class="All">Podcasts </button>
+        <button class="All">Mixes</button>
+        <button class="All">NollyWood </button>
+        <button class="All">Playlists </button>
+        <button class="All"> Music </button>
+        <button class="All">Podcasts </button>
+        <button class="All">Mixes</button>
+        <button class="All">NollyWood </button>
+        <button class="All">Playlists </button>
+      </div>
+      <div class="video-Container" >
+        <div class="video-Template">
+          <img src="https://img.freepik.com/premium-psd/youtube-video-thumbnail-design-background-business-video_1101917-4158.jpg?ga=GA1.1.1231290701.1738956793&semt=ais_hybrid" class="thumbnail"
+           alt="">
+          <div class="content" >
+<img src="https://yt3.ggpht.com/ytc/AIdro_ke6u9y9ZKMrAkDj5u9bM9GlnPBTtx0ICVvVuiSU3XquVo=s68-c-k-c0x00ffffff-no-rj
+"  class="photo"
+ alt="">
+<div class="details" >
+  <p>Flex jobs has 100% verified Jobs</p>
+<p>Resume help,CarrerTools,Signs......</p>
+<p>sponsered.Flexjobs</p>
+</div>
+<i class='bx bx-dots-vertical-rounded'></i>
+
+          </div>
+          <!-- <div class="btns" >
+            <button class="btn1">Watch</button>
+            <button class="btn2"> Seemore</button>
+          </div> -->
+        </div>
+        <div class="video-Template">
+          <img src="https://img.freepik.com/premium-psd/youtube-video-thumbnail-design-background-business-video_1101917-4158.jpg?ga=GA1.1.1231290701.1738956793&semt=ais_hybrid" class="thumbnail"
+           alt="">
+          <div class="content" >
+<img src="https://yt3.ggpht.com/ytc/AIdro_ke6u9y9ZKMrAkDj5u9bM9GlnPBTtx0ICVvVuiSU3XquVo=s68-c-k-c0x00ffffff-no-rj
+"  class="photo"
+ alt="">
+<div class="details" >
+  <p>Flex jobs has 100% verified Jobs</p>
+<p>Resume help,CarrerTools,Signs......</p>
+<p>sponsered.Flexjobs</p>
+</div>
+<i class='bx bx-dots-vertical-rounded'></i>
+
+          </div>
+          <!-- <div class="btns" >
+            <button class="btn1">Watch</button>
+            <button class="btn2"> Seemore</button>
+          </div> -->
+        </div>
+        <div class="video-Template">
+          <img src="https://img.freepik.com/premium-psd/youtube-video-thumbnail-design-background-business-video_1101917-4158.jpg?ga=GA1.1.1231290701.1738956793&semt=ais_hybrid" class="thumbnail"
+           alt="">
+          <div class="content" >
+<img src="https://yt3.ggpht.com/ytc/AIdro_ke6u9y9ZKMrAkDj5u9bM9GlnPBTtx0ICVvVuiSU3XquVo=s68-c-k-c0x00ffffff-no-rj
+"  class="photo"
+ alt="">
+<div class="details" >
+  <p>Flex jobs has 100% verified Jobs</p>
+<p>Resume help,CarrerTools,Signs......</p>
+<p>sponsered.Flexjobs</p>
+</div>
+<i class='bx bx-dots-vertical-rounded'></i>
+
+          </div>
+          <!-- <div class="btns" >
+            <button class="btn1">Watch</button>
+            <button class="btn2"> Seemore</button>
+          </div> -->
+        </div>
+        <div class="video-Template">
+          <img src="https://img.freepik.com/premium-psd/youtube-video-thumbnail-design-background-business-video_1101917-4158.jpg?ga=GA1.1.1231290701.1738956793&semt=ais_hybrid" class="thumbnail"
+           alt="">
+          <div class="content" >
+<img src="https://yt3.ggpht.com/ytc/AIdro_ke6u9y9ZKMrAkDj5u9bM9GlnPBTtx0ICVvVuiSU3XquVo=s68-c-k-c0x00ffffff-no-rj
+"  class="photo"
+ alt="">
+<div class="details" >
+  <p>Flex jobs has 100% verified Jobs</p>
+<p>Resume help,CarrerTools,Signs......</p>
+<p>sponsered.Flexjobs</p>
+</div>
+<i class='bx bx-dots-vertical-rounded'></i>
+
+          </div>
+          <!-- <div class="btns" >
+            <button class="btn1">Watch</button>
+            <button class="btn2"> Seemore</button>
+          </div> -->
+        </div>
+        <div class="video-Template">
+          <img src="https://img.freepik.com/premium-psd/youtube-video-thumbnail-design-background-business-video_1101917-4158.jpg?ga=GA1.1.1231290701.1738956793&semt=ais_hybrid" class="thumbnail"
+           alt="">
+          <div class="content" >
+<img src="https://yt3.ggpht.com/ytc/AIdro_ke6u9y9ZKMrAkDj5u9bM9GlnPBTtx0ICVvVuiSU3XquVo=s68-c-k-c0x00ffffff-no-rj
+"  class="photo"
+ alt="">
+<div class="details" >
+  <p>Flex jobs has 100% verified Jobs</p>
+<p>Resume help,CarrerTools,Signs......</p>
+<p>sponsered.Flexjobs</p>
+</div>
+<i class='bx bx-dots-vertical-rounded'></i>
+
+          </div>
+          <!-- <div class="btns" >
+            <button class="btn1">Watch</button>
+            <button class="btn2"> Seemore</button>
+          </div> -->
+        </div>
+        <div class="video-Template">
+          <img src="https://img.freepik.com/premium-psd/youtube-video-thumbnail-design-background-business-video_1101917-4158.jpg?ga=GA1.1.1231290701.1738956793&semt=ais_hybrid" class="thumbnail"
+           alt="">
+          <div class="content" >
+<img src="https://yt3.ggpht.com/ytc/AIdro_ke6u9y9ZKMrAkDj5u9bM9GlnPBTtx0ICVvVuiSU3XquVo=s68-c-k-c0x00ffffff-no-rj
+"  class="photo"
+ alt="">
+<div class="details" >
+  <p>Flex jobs has 100% verified Jobs</p>
+<p>Resume help,CarrerTools,Signs......</p>
+<p>sponsered.Flexjobs</p>
+</div>
+<i class='bx bx-dots-vertical-rounded'></i>
+
+          </div>
+          <!-- <div class="btns" >
+            <button class="btn1">Watch</button>
+            <button class="btn2"> Seemore</button>
+          </div> -->
+        </div>
+        <div class="video-Template">
+          <img src="https://img.freepik.com/premium-psd/youtube-video-thumbnail-design-background-business-video_1101917-4158.jpg?ga=GA1.1.1231290701.1738956793&semt=ais_hybrid" class="thumbnail"
+           alt="">
+          <div class="content" >
+<img src="https://yt3.ggpht.com/ytc/AIdro_ke6u9y9ZKMrAkDj5u9bM9GlnPBTtx0ICVvVuiSU3XquVo=s68-c-k-c0x00ffffff-no-rj
+"  class="photo"
+ alt="">
+<div class="details" >
+  <p>Flex jobs has 100% verified Jobs</p>
+<p>Resume help,CarrerTools,Signs......</p>
+<p>sponsered.Flexjobs</p>
+</div>
+<i class='bx bx-dots-vertical-rounded'></i>
+
+          </div>
+          <!-- <div class="btns" >
+            <button class="btn1">Watch</button>
+            <button class="btn2"> Seemore</button>
+          </div> -->
+        </div>
+        <div class="video-Template">
+          <img src="https://img.freepik.com/premium-psd/youtube-video-thumbnail-design-background-business-video_1101917-4158.jpg?ga=GA1.1.1231290701.1738956793&semt=ais_hybrid" class="thumbnail"
+           alt="">
+          <div class="content" >
+<img src="https://yt3.ggpht.com/ytc/AIdro_ke6u9y9ZKMrAkDj5u9bM9GlnPBTtx0ICVvVuiSU3XquVo=s68-c-k-c0x00ffffff-no-rj
+"  class="photo"
+ alt="">
+<div class="details" >
+  <p>Flex jobs has 100% verified Jobs</p>
+<p>Resume help,CarrerTools,Signs......</p>
+<p>sponsered.Flexjobs</p>
+</div>
+<i class='bx bx-dots-vertical-rounded'></i>
+
+          </div>
+          <!-- <div class="btns" >
+            <button class="btn1">Watch</button>
+            <button class="btn2"> Seemore</button>
+          </div> -->
+        </div>
+        <div class="video-Template">
+          <img src="https://img.freepik.com/premium-psd/youtube-video-thumbnail-design-background-business-video_1101917-4158.jpg?ga=GA1.1.1231290701.1738956793&semt=ais_hybrid" class="thumbnail"
+           alt="">
+          <div class="content" >
+<img src="https://yt3.ggpht.com/ytc/AIdro_ke6u9y9ZKMrAkDj5u9bM9GlnPBTtx0ICVvVuiSU3XquVo=s68-c-k-c0x00ffffff-no-rj
+"  class="photo"
+ alt="">
+<div class="details" >
+  <p>Flex jobs has 100% verified Jobs</p>
+<p>Resume help,CarrerTools,Signs......</p>
+<p>sponsered.Flexjobs</p>
+</div>
+<i class='bx bx-dots-vertical-rounded'></i>
+
+          </div>
+          <!-- <div class="btns" >
+            <button class="btn1">Watch</button>
+            <button class="btn2"> Seemore</button>
+          </div> -->
+        </div>
+        <div class="video-Template">
+          <img src="https://img.freepik.com/premium-psd/youtube-video-thumbnail-design-background-business-video_1101917-4158.jpg?ga=GA1.1.1231290701.1738956793&semt=ais_hybrid" class="thumbnail"
+           alt="">
+          <div class="content" >
+<img src="https://yt3.ggpht.com/ytc/AIdro_ke6u9y9ZKMrAkDj5u9bM9GlnPBTtx0ICVvVuiSU3XquVo=s68-c-k-c0x00ffffff-no-rj
+"  class="photo"
+ alt="">
+<div class="details" >
+  <p>Flex jobs has 100% verified Jobs</p>
+<p>Resume help,CarrerTools,Signs......</p>
+<p>sponsered.Flexjobs</p>
+</div>
+<i class='bx bx-dots-vertical-rounded'></i>
+
+          </div>
+          <!-- <div class="btns" >
+            <button class="btn1">Watch</button>
+            <button class="btn2"> Seemore</button>
+          </div> -->
+        </div>
+        <div class="video-Template">
+          <img src="https://img.freepik.com/premium-psd/youtube-video-thumbnail-design-background-business-video_1101917-4158.jpg?ga=GA1.1.1231290701.1738956793&semt=ais_hybrid" class="thumbnail"
+           alt="">
+          <div class="content" >
+<img src="https://yt3.ggpht.com/ytc/AIdro_ke6u9y9ZKMrAkDj5u9bM9GlnPBTtx0ICVvVuiSU3XquVo=s68-c-k-c0x00ffffff-no-rj
+"  class="photo"
+ alt="">
+<div class="details" >
+  <p>Flex jobs has 100% verified Jobs</p>
+<p>Resume help,CarrerTools,Signs......</p>
+<p>sponsered.Flexjobs</p>
+</div>
+<i class='bx bx-dots-vertical-rounded'></i>
+
+          </div>
+          <!-- <div class="btns" >
+            <button class="btn1">Watch</button>
+            <button class="btn2"> Seemore</button>
+          </div> -->
+        </div>
+        <div class="video-Template">
+          <img src="https://img.freepik.com/premium-psd/youtube-video-thumbnail-design-background-business-video_1101917-4158.jpg?ga=GA1.1.1231290701.1738956793&semt=ais_hybrid" class="thumbnail"
+           alt="">
+          <div class="content" >
+<img src="https://yt3.ggpht.com/ytc/AIdro_ke6u9y9ZKMrAkDj5u9bM9GlnPBTtx0ICVvVuiSU3XquVo=s68-c-k-c0x00ffffff-no-rj
+"  class="photo"
+ alt="">
+<div class="details" >
+  <p>Flex jobs has 100% verified Jobs</p>
+<p>Resume help,CarrerTools,Signs......</p>
+<p>sponsered.Flexjobs</p>
+</div>
+<i class='bx bx-dots-vertical-rounded'></i>
+
+          </div>
+          <!-- <div class="btns" >
+            <button class="btn1">Watch</button>
+            <button class="btn2"> Seemore</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+   </section>
+    <script src="app.js"></script>
+  </body>
+</html>
