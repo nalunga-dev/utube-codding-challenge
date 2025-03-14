@@ -52,14 +52,14 @@ section {
       }
     }
     .video-Container {
-      overflow-x: auto;
-      height: 100vh;
-      background-color: white;
-
-      // display: flex;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      padding: 1rem;
+      overflow-x: auto;
+      height: 100vh;
+      background-color: rgb(233, 8, 8);
       @media (max-width: 455px) {
+        width: 100%;
         grid-template-columns: repeat(1, 1fr);
       }
       .video-Template {
@@ -68,10 +68,20 @@ section {
         flex-direction: column;
         padding: 1rem;
         gap: 0.8rem;
+
+        .details {
+          display: -webkit-box;
+          -webkit-line-clamp: 1; /* Number of lines to show */
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
       }
       .thumbnail {
         width: 100%;
-        display: block;
+        height: auto;
+        border: 1px solid red;
+        object-fit: cover;
+        // display: block;
         border-radius: 0.8rem;
       }
       .content {
